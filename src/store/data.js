@@ -1,6 +1,6 @@
 export const folders = {
   name: 'System',
-  subfolders:[
+  subfolders: [
     {
       name: 'C',
       subfolders: [
@@ -48,12 +48,12 @@ export const folders = {
                 {
                   name: 'Scary Movie',
                   subfolders: []
-                },
+                }
               ]
             }
           ]
         }
       ]
-    },
+    }
   ]
 }

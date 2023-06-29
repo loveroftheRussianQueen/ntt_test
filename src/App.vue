@@ -16,7 +16,7 @@ const closeModal = () => {
 <template>
   <div class="main">
     <button class="btn" @click="openModal">Открыть</button>
-    <Modal v-if="isShowModal" @close="closeModal"/>
+    <Modal v-if="isShowModal" @close="closeModal" />
   </div>
 </template>
 

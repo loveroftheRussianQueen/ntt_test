@@ -1,19 +1,18 @@
 <script setup>
-import { onUnmounted, onUpdated, ref } from 'vue';
-import { useIdStore } from '../store/id';
-import { folders } from '../store/data';
+import { onUnmounted, onUpdated, ref } from 'vue'
+import { useIdStore } from '../store/id'
+import { folders } from '../store/data'
 
-import Folder from './Folder.vue';
+import Folder from './Folder.vue'
 
-const emit = defineEmits(['close']);
-const idStore = useIdStore();
-const currentId = ref(null);
+const emit = defineEmits(['close'])
+const idStore = useIdStore()
+const currentId = ref(null)
 
-const selectFolder = () =>{
-    currentId.value = idStore.id;
-    emit('close');
+const selectFolder = () => {
+  currentId.value = idStore.id
+  emit('close')
 }
-
 </script>
 
 <template>
@@ -22,7 +21,7 @@ const selectFolder = () =>{
       <button class="btn" @click="$emit('close')">Close</button>
       <ul class="folders">
         <button class="btn second" @click="selectFolder">OK</button>
-        <Folder class="folder" :folder="folders"/>
+        <Folder class="folder" :folder="folders" />
       </ul>
     </div>
   </div>
@@ -77,7 +76,7 @@ const selectFolder = () =>{
     border: 1px solid #413b3b;
   }
 
-  &.second{
+  &.second {
     right: 150px;
   }
 }
