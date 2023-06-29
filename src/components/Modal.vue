@@ -1,10 +1,7 @@
 <script setup>
-import { folders } from '../store/data'
+import { folders } from '../store/data';
 
-const showSubFolder = (folder) => {
-  if (folder.subfolders.length > 0) {
-  }
-}
+import Folder from './Folder.vue';
 
 const emit = defineEmits(['close'])
 </script>
@@ -13,9 +10,9 @@ const emit = defineEmits(['close'])
   <div class="modal">
     <div class="content">
       <button class="btn" @click="$emit('close')">Close</button>
-      <div class="folders">
-        <div v-for="folder in folders" style="color: #000">{{ folder.name }}</div>
-      </div>
+      <ul class="folders">
+        <Folder class="folder" :folder="folders"/>
+      </ul>
     </div>
   </div>
 </template>
