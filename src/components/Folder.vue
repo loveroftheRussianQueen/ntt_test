@@ -1,19 +1,23 @@
 <script setup>
 import { computed, onMounted, onUpdated, ref } from 'vue';
+import { useIdStore } from '../store/id';
 
 const props = defineProps({folder: Object});
+const emit = defineEmits(['pushId']);
 
 const isOpen = ref(false);
-const id = ref(null);
 
 const isFolder = computed(() =>{
     return props.folder.subfolders;
 })
 
+const idStore = useIdStore();
+
 const toggle = () =>{
     if(isFolder){
         isOpen.value = !isOpen.value;   
     }
+    idStore.id = props.folder.name;
 }
 </script>
 
