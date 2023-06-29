@@ -11,6 +11,7 @@ const emit = defineEmits(['close'])
     <div class="content">
       <button class="btn" @click="$emit('close')">Close</button>
       <ul class="folders">
+        <button class="btn second">OK</button>
         <Folder class="folder" :folder="folders"/>
       </ul>
     </div>
@@ -45,6 +46,7 @@ const emit = defineEmits(['close'])
   background-color: #ece5e5;
   height: 100%;
   width: 100%;
+  overflow-y: scroll;
 }
 
 .btn {
@@ -63,6 +65,10 @@ const emit = defineEmits(['close'])
   &:hover {
     background-color: #413b3b;
     border: 1px solid #413b3b;
+  }
+
+  &.second{
+    right: 150px;
   }
 }
 </style>

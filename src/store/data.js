@@ -48,7 +48,7 @@ export const folders = {
                 {
                   name: 'Scary Movie',
                   subfolders: []
-                }
+                },
               ]
             }
           ]
