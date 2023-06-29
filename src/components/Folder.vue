@@ -8,7 +8,7 @@ const emit = defineEmits(['pushId'])
 const isOpen = ref(false)
 
 const isFolder = computed(() => {
-  return props.folder.subfolders
+  return props.folder.subfolders && props.folder.subfolders.length;
 })
 
 const idStore = useIdStore()
